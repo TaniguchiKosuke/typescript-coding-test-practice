@@ -37,4 +37,17 @@ function isPalindromeV2(x) {
     }
     return true;
 }
-isPalindromeV2(121);
+// isPalindromeV2(121);
+function strStr(haystack, needle) {
+    if (needle == "") {
+        return 0;
+    }
+    for (var i = 0; i < haystack.length - needle.length + 1; i++) {
+        if (haystack.slice(i, i + needle.length) === needle) {
+            return i;
+        }
+    }
+    return -1;
+}
+;
+console.log(strStr("helloo", "ll"));
