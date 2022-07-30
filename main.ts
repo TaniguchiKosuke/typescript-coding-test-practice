@@ -49,7 +49,7 @@ function isPalindromeV2(x: number): boolean {
 // isPalindromeV2(121);
 
 function strStr(haystack: string, needle: string): number {
-    if (needle == "") {
+    if (needle === "") {
         return 0;
     }
 
