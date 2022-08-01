@@ -39,7 +39,7 @@ function isPalindromeV2(x) {
 }
 // isPalindromeV2(121);
 function strStr(haystack, needle) {
-    if (needle == "") {
+    if (needle === "") {
         return 0;
     }
     for (var i = 0; i < haystack.length - needle.length + 1; i++) {
@@ -49,5 +49,28 @@ function strStr(haystack, needle) {
     }
     return -1;
 }
-;
 console.log(strStr("helloo", "ll"));
+var TreeNode = /** @class */ (function () {
+    function TreeNode(val, children) {
+        this.val = (val === undefined ? 0 : val);
+        this.children = (children === undefined ? [] : children);
+    }
+    return TreeNode;
+}());
+function maxDepth(root) {
+    if (root === null) {
+        return 0;
+    }
+    if (root.children.length === 0) {
+        return 1;
+    }
+    var childDepthList = [];
+    for (var _i = 0, _a = root.children; _i < _a.length; _i++) {
+        var child = _a[_i];
+        childDepthList.push(maxDepth(child) + 1);
+    }
+    return Math.max.apply(Math, childDepthList);
+}
+;
+console.log([1, 3, 3, 2, 8, 7]);
+console.log.apply(console, [1, 43, 3, 99, 3, 8]);
